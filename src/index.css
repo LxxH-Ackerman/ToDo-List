@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)), url(./kidMikasa.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #FEC260;
+}
+body main {
+  width: 800px;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+body main header .first-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body main header .first-line a {
+  text-decoration: none;
+}
+body main header .first-line a h1 {
+  font-size: 30px;
+  color: #FEC260;
+}
+body main header .first-line a h1 span {
+  font-size: 16px;
+  letter-spacing: -4px;
+  color: #A10035;
+}
+body main header .nd-line {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body main header .nd-line h1 {
+  font-size: 25px;
+  position: relative;
+}
+body main header .nd-line .line {
+  position: absolute;
+  transform: translate(-60%, 400%);
+  height: 5px;
+  width: 50px;
+  background: #A10035;
+  border-radius: 5px;
+}
+body main header .rd-line {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body main header .rd-line input {
+  width: 700px;
+  height: 35px;
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+  background: transparent;
+  border: 2px solid #FEC260;
+  color: #FEC260;
+}
+body main header .rd-line input::-moz-placeholder {
+  color: #A10035;
+  opacity: 0.7;
+}
+body main header .rd-line input:-ms-input-placeholder {
+  color: #A10035;
+  opacity: 0.7;
+}
+body main header .rd-line input::placeholder {
+  color: #A10035;
+  opacity: 0.7;
+}
+body main header .rd-line button {
+  height: 35px;
+  font-size: 16px;
+  width: 50px;
+  background: #FEC260;
+  color: #A10035;
+  font-weight: bolder;
+  text-transform: uppercase;
+  border: 2px solid #FEC260;
+  cursor: pointer;
+  transition: 1s;
+}
+body main header .rd-line button:hover {
+  background: transparent;
+  color: #FEC260;
+}
+body main .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+body main .title p {
+  font-size: 18px;
+}
+body main .title p span {
+  color: #A10035;
+}
+body main .container {
+  margin-top: 20px;
+  width: 100%;
+}
+body main .container li {
+  list-style: none;
+  width: 100%;
+}
+body main .container li .tasks {
+  margin-top: 5px;
+  width: 100%;
+  height: 48px;
+  background: #A10035;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+body main .container li .tasks .text-tasks .script {
+  font-size: 16px;
+  margin-left: 10px;
+}
+body main .container li .tasks .text-tasks .script::first-letter {
+  text-transform: uppercase;
+}
+body main .container li .tasks .btn button {
+  height: 37px;
+  padding: 0 5px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #A10035;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  background: #FEC260;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
+  border-radius: 5px;
+}
+body main .container li .tasks .btn button:hover {
+  background: black;
+  color: #FEC260;
+}
+body main .container li .tasks .btn button:nth-child(2) {
+  margin: 0 6px;
+}
+body main .show-up {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body main .show-up .task-count p {
+  font-size: 16px;
+}
+body main .show-up .show-btn button {
+  height: 37px;
+  padding: 0 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #A10035;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  background: #FEC260;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
+  border-radius: 5px;
+}
+body main .show-up .show-btn button:hover {
+  opacity: 0.9;
+}
+body main .show-up .show-btn button:nth-child(2) {
+  margin: 0 5px;
+  background: #A10035;
+  color: #FEC260;
+}
+body main footer {
+  margin-top: 30px;
+}
+body main footer .credit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main footer .credit p a {
+  text-decoration: none;
+  color: green;
+  transition: 2s;
+}
+body main footer .credit p a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  body main {
+    width: 100%;
+  }
+}
+@media (max-width: 550px) {
+  body main .container li .tasks {
+    height: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  body main .container li .tasks .btn {
+    display: flex;
+    flex-direction: column;
+  }
+  body main .container li .tasks .btn button:nth-child(2) {
+    margin: 5px 0;
+  }
+}
+@media (max-width: 420px) {
+  .show-btn {
+    display: flex;
+    flex-direction: column;
+  }
+  .show-btn button:nth-child(2) {
+    margin: 5px 0;
+  }
+}/*# sourceMappingURL=index.css.map */

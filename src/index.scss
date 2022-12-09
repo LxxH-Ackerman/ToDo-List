@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+* {
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+$red: #A10035;
+$purple: #2A0944;
+$sky: #3FA796;
+$yellow: #FEC260;
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient( rgba(0, 0, 0, .9), rgba(0, 0, 0, .8)) ,url(./kidMikasa.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: $yellow;
+    main {
+        width: 800px;
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        header {
+            .first-line {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                a {
+                    text-decoration: none;
+                    h1 {
+                        font-size: 30px;
+                        color: $yellow;
+                        span {
+                            font-size: 16px;
+                            letter-spacing: -4px;
+                            color: $red;
+                        }
+                    }
+                }
+                p{
+
+                }
+            }
+            .nd-line {
+                width: 100%;
+                margin-top: 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                h1 {
+                    font-size: 25px;
+                    position: relative;
+                }
+                .line {
+                    position: absolute;
+                    transform: translate(-60%, 400%);
+                    height: 5px;
+                    width: 50px;
+                    background: $red;
+                    border-radius: 5px;
+                }
+            }
+            .rd-line {
+                margin-top: 20px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                input {
+                    width: 700px;
+                    height: 35px;
+                    padding: 10px;
+                    font-size: 16px;
+                    outline: none;
+                    background: transparent;
+                    border: 2px solid $yellow;
+                    color: $yellow;
+                    &::placeholder {
+                        color: $red;
+                        opacity: .7;
+                    }
+                }
+                button {
+                    height: 35px;
+                    font-size: 16px;
+                    width: 50px;
+                    background: $yellow;
+                    color: $red;
+                    font-weight: bolder;
+                    text-transform: uppercase;
+                    border: 2px solid $yellow;
+                    cursor: pointer;
+                    transition: 1s;
+                    &:hover {
+                        background: transparent;
+                        color: $yellow;
+                    }
+                }
+            }
+        }
+        .title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            p {
+                font-size: 18px;
+                span {
+                    color: $red;
+                }
+            }
+        }
+        .container {
+            margin-top: 20px;
+            width: 100%;
+            li {
+                list-style: none;
+                width: 100%;
+                .tasks {
+                    margin-top: 5px;
+                    width: 100%;
+                    height: 48px;
+                    background: $red;
+                    padding: 0 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-radius: 5px;
+                    .text-tasks {
+                        .script {
+                            font-size: 16px;
+                            margin-left: 10px;
+                            &::first-letter {
+                                text-transform: uppercase;
+                            }
+                        }
+                        .date {
+
+                        }
+                    }
+                    .btn {
+                        // background-color: red;
+                        button {
+                            height: 37px;
+                            padding: 0 5px;
+                            border: none;
+                            outline: none;
+                            font-size: 14px;
+                            color: $red;
+                            text-transform: capitalize;
+                            letter-spacing: 1px;
+                            background: $yellow;
+                            cursor: pointer;
+                            box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
+                            border-radius: 5px;
+                            &:hover {
+                                background: black;
+                                color: $yellow;
+                            }
+                        }
+                        button:nth-child(2) {
+                            margin: 0 6px;
+                            
+                        }
+                    }
+                }
+            }
+        }
+        .show-up {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .task-count {
+                p {
+                    font-size: 16px;
+                }
+            }
+            .show-btn {
+                button {
+                    height: 37px;
+                    padding: 0 10px;
+                    border: none;
+                    outline: none;
+                    font-size: 14px;
+                    color: $red;
+                    text-transform: capitalize;
+                    letter-spacing: 1px;
+                    background: $yellow;
+                    cursor: pointer;
+                    box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
+                    border-radius: 5px;
+                    &:hover {
+                        opacity: .9;
+                    }
+                }
+                button:nth-child(2) {
+                    margin: 0 5px;
+                    background: $red;
+                    color: $yellow;
+                }
+            }
+        }
+        footer {
+            margin-top: 30px;
+            .credit {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                p {
+                    a {
+                        text-decoration: none;
+                        color: green;
+                        transition: 2s;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    body {
+        main {
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 550px) {
+    body {
+        main {
+            .container {
+                li {
+                    .tasks {
+                        height: auto;
+                        padding-top: 5px;
+                        padding-bottom: 5px;
+                        .btn {
+                            display: flex;
+                            flex-direction: column;
+                            button:nth-child(2) {
+                                margin: 5px 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .show-btn {
+        display: flex;
+        flex-direction: column;
+        button:nth-child(2) {
+            margin: 5px 0;
+        }
+    }
+}
