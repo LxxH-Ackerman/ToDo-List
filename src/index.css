@@ -37,6 +37,9 @@ body main header .first-line a h1 span {
   letter-spacing: -4px;
   color: #A10035;
 }
+body main header .first-line p {
+  font-size: 16px;
+}
 body main header .nd-line {
   width: 100%;
   margin-top: 30px;
@@ -107,6 +110,7 @@ body main .title {
   align-items: center;
   justify-content: center;
   margin-top: 20px;
+  text-align: center;
 }
 body main .title p {
   font-size: 18px;
@@ -199,6 +203,7 @@ body main footer .credit {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 body main footer .credit p a {
   text-decoration: none;
@@ -229,11 +234,47 @@ body main footer .credit p a:hover {
   }
 }
 @media (max-width: 420px) {
+  body main .show-up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  body main .show-up .task-count {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 400px) {
+  body main header .first-line {
+    flex-direction: column;
+    justify-content: center;
+  }
+  body main header .first-line p {
+    margin-top: 5px;
+  }
+  body main header .nd-line {
+    margin-top: 20px;
+  }
+  body main header .rd-line {
+    flex-direction: column;
+    justify-content: center;
+  }
+  body main header .rd-line input {
+    width: 100%;
+  }
+  body main header .rd-line button {
+    width: 100%;
+  }
+}
+@media (max-width: 260px) {
   .show-btn {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  .show-btn button:nth-child(2) {
+  .show-btn button {
     margin: 5px 0;
   }
 }/*# sourceMappingURL=index.css.map */

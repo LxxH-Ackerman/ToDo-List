@@ -41,7 +41,7 @@ body {
                     }
                 }
                 p{
-
+                    font-size: 16px;
                 }
             }
             .nd-line {
@@ -107,6 +107,7 @@ body {
             align-items: center;
             justify-content: center;
             margin-top: 20px;
+            text-align: center;
             p {
                 font-size: 18px;
                 span {
@@ -211,6 +212,7 @@ body {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                text-align: center;
                 p {
                     a {
                         text-decoration: none;
@@ -257,10 +259,56 @@ body {
 }
 
 @media (max-width: 420px) {
+    body {
+        main {
+            .show-up {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+                .task-count {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 400px) {
+    body {
+        main {
+            header {
+                .first-line {
+                    flex-direction: column;
+                    justify-content: center;
+                    p {
+                        margin-top: 5px;
+                    }
+                }
+                .nd-line {
+                    margin-top: 20px;
+                }
+                .rd-line {
+                    flex-direction: column;
+                    justify-content: center;
+                    input {
+                        width: 100%;
+                    }
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 260px) {
     .show-btn {
         display: flex;
         flex-direction: column;
-        button:nth-child(2) {
+        align-items: center;
+        justify-content: center;
+        button {
             margin: 5px 0;
         }
     }
