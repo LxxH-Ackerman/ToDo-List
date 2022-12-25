@@ -9,7 +9,7 @@
 body {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)), url(./myLogo.png) no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
   background-position: center;
   background-size: cover;
   color: #FEC260;
@@ -27,6 +27,9 @@ body main header .first-line {
 }
 body main header .first-line a {
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 body main header .first-line a h1 {
   font-size: 30px;
@@ -37,8 +40,8 @@ body main header .first-line a h1 span {
   letter-spacing: -4px;
   color: #A10035;
 }
-body main header .first-line p {
-  font-size: 16px;
+body main header .first-line a img {
+  width: 50px;
 }
 body main header .nd-line {
   width: 100%;
@@ -76,6 +79,7 @@ body main header .rd-line input {
   background: transparent;
   border: 2px solid #FEC260;
   color: #FEC260;
+  border-radius: 5px;
 }
 body main header .rd-line input::-moz-placeholder {
   color: #A10035;
@@ -99,7 +103,7 @@ body main header .rd-line button {
   text-transform: uppercase;
   border: 2px solid #FEC260;
   cursor: pointer;
-  transition: 1s;
+  border-radius: 5px;
 }
 body main header .rd-line button:hover {
   background: transparent;
@@ -144,6 +148,11 @@ body main .container li .tasks .text-tasks .script {
 body main .container li .tasks .text-tasks .script::first-letter {
   text-transform: uppercase;
 }
+body main .container li .tasks .text-tasks .date {
+  position: absolute;
+  font-size: 10px;
+  margin-left: 10px;
+}
 body main .container li .tasks .btn button {
   height: 37px;
   padding: 0 5px;
@@ -155,11 +164,10 @@ body main .container li .tasks .btn button {
   letter-spacing: 1px;
   background: #FEC260;
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
   border-radius: 5px;
 }
 body main .container li .tasks .btn button:hover {
-  background: black;
+  background: #68B984;
   color: #FEC260;
 }
 body main .container li .tasks .btn button:nth-child(2) {
@@ -207,7 +215,7 @@ body main footer .credit {
 }
 body main footer .credit p a {
   text-decoration: none;
-  color: green;
+  color: #68B984;
   transition: 2s;
 }
 body main footer .credit p a:hover {

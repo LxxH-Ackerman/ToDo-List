@@ -7,14 +7,16 @@
 }
 
 $red: #A10035;
+$green: #68B984;
 $purple: #2A0944;
 $sky: #3FA796;
 $yellow: #FEC260;
+$background: rgb(25 25 25);
 
 body {
     width: 100%;
     height: 100vh;
-    background: linear-gradient( rgba(0, 0, 0, .9), rgba(0, 0, 0, .8)) ,url(./myLogo.png) no-repeat;
+    background: linear-gradient( rgba(0, 0, 0, .9), rgba(0, 0, 0, .9));
     background-position: center;
     background-size: cover;
     color: $yellow;
@@ -30,6 +32,9 @@ body {
                 justify-content: space-between;
                 a {
                     text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
                     h1 {
                         font-size: 30px;
                         color: $yellow;
@@ -39,9 +44,9 @@ body {
                             color: $red;
                         }
                     }
-                }
-                p{
-                    font-size: 16px;
+                    img {
+                        width: 50px;
+                    }
                 }
             }
             .nd-line {
@@ -79,6 +84,7 @@ body {
                     background: transparent;
                     border: 2px solid $yellow;
                     color: $yellow;
+                    border-radius: 5px;
                     &::placeholder {
                         color: $red;
                         opacity: .7;
@@ -94,7 +100,7 @@ body {
                     text-transform: uppercase;
                     border: 2px solid $yellow;
                     cursor: pointer;
-                    transition: 1s;
+                    border-radius: 5px;
                     &:hover {
                         background: transparent;
                         color: $yellow;
@@ -140,7 +146,9 @@ body {
                             }
                         }
                         .date {
-
+                            position: absolute;
+                            font-size: 10px;
+                            margin-left: 10px;
                         }
                     }
                     .btn {
@@ -156,10 +164,9 @@ body {
                             letter-spacing: 1px;
                             background: $yellow;
                             cursor: pointer;
-                            box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 15px;
                             border-radius: 5px;
                             &:hover {
-                                background: black;
+                                background: $green;
                                 color: $yellow;
                             }
                         }
@@ -216,7 +223,7 @@ body {
                 p {
                     a {
                         text-decoration: none;
-                        color: green;
+                        color: $green;
                         transition: 2s;
                         &:hover {
                             text-decoration: underline;

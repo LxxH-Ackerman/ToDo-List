@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import myLogo from "./myLogo.png";
 
 function local() {
     const stored = localStorage.getItem("tasks");
@@ -30,7 +31,7 @@ export default function App() {
             alert("Your task is empty!");
             return;
         }
-        setData([{id: Date.now(), task: value, done: false }].concat(data));
+        setData([{id: Date.now(), task: value, done: false, date: dateOfTask() }].concat(data));
         setValue("");
     }
     const clickEnter = (e) => {
@@ -39,7 +40,7 @@ export default function App() {
                 alert("Your task is empty!");
                 return;
             }
-            setData([{id: Date.now(), task: value, done: false}].concat(data));
+            setData([{id: Date.now(), task: value, done: false, date: dateOfTask() }].concat(data));
             setValue("");
         }
     }
@@ -78,6 +79,27 @@ export default function App() {
     useEffect(() => {
         localStorage.setItem("tasks", JSON.stringify(data));
     }, [data])
+    const dateOfTask = () => {
+        const date = new Date();
+        const day = date.getDate();
+        let month = date.getMonth();
+        const year = date.getFullYear();
+        switch(month) {
+            case 0: month = "January"; break;
+            case 1: month = "February"; break;
+            case 2: month = "March"; break;
+            case 3: month = "April"; break;
+            case 4: month = "May"; break;
+            case 5: month = "June"; break;
+            case 6: month = "July"; break;
+            case 7: month = "August"; break;
+            case 8: month = "September"; break;
+            case 9: month = "October"; break;
+            case 10: month = "November"; break;
+            case 11: month = "December"; break;
+        }
+        return `${month} ${day}, ${year}`;
+    }
     return (
         <main>
             <header>
@@ -85,7 +107,9 @@ export default function App() {
                     <a href="/">
                         <h1>L <span>xx</span> H</h1>
                     </a>
-                    <p>Enjoy your Day!</p>
+                    <a href="/">
+                        <img src={myLogo}/>
+                    </a>
                 </div>
                 <div className="nd-line">
                     <h1>To-do List</h1>
@@ -104,9 +128,10 @@ export default function App() {
                     data.map(data => {
                         return (
                             <li key={data.id}>
-                                <div className="tasks" style={{background: data.done ? "#2A0944" : "#A10035"}}>
+                                <div className="tasks" style={{background: data.done ? "#68B984" : "#A10035", color: data.done ? "rgb(25 25 25)" : "#FEC260"}}>
                                     <div className="text-tasks">
                                         <p className="script">{data.task}</p>
+                                        <p className="date">{data.date}</p>
                                     </div>
                                     <div className="btn">
                                         <button onClick={() => deleteTask(data.id)} style={{display: deleteButton === false ? "none" : ""}}>Delete</button>
@@ -136,6 +161,18 @@ export default function App() {
                     <button onClick={editButtonShowing}>{editButton === false ? "Edit" : "Editing"}</button>
                 </div>
             </div>
+            {/* <div className="congrates">
+                <div className="sen">
+                    <h1>Congrauation; you've done all tasks!</h1>
+                </div>
+                <div className="gift">
+                    <h1>Click heret to recieve your gift.</h1>
+                    <button>Gift</button>
+                </div>
+                <div className="after-clicking">
+
+                </div>
+            </div> */}
             <footer>
                 <div className="credit">
                     <p style={{display: data.length > 0 ? "block" : "none"}}>Contact me <a href="https://www.facebook.com/sovann.lyna.311?mibextid=LQQJ4d" target= "_blank">Lee Hour</a></p>
