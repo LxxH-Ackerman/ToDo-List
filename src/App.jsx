@@ -128,7 +128,7 @@ export default function App() {
                     data.map(data => {
                         return (
                             <li key={data.id}>
-                                <div className="tasks" style={{background: data.done ? "#68B984" : "#A10035", color: data.done ? "rgb(25 25 25)" : "#FEC260"}}>
+                                <div className="tasks" style={{background: data.done ? "#68B984" : "#202020", color: data.done ? "rgb(25 25 25)" : "#FEC260"}}>
                                     <div className="text-tasks">
                                         <p className="script">{data.task}</p>
                                         <p className="date">{data.date}</p>

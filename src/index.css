@@ -54,6 +54,9 @@ body main header .nd-line {
 body main header .nd-line h1 {
   font-size: 25px;
   position: relative;
+  color: transparent;
+  background: linear-gradient(0deg, #A10035 50%, #FEC260 50%);
+  -webkit-background-clip: text;
 }
 body main header .nd-line .line {
   position: absolute;
@@ -77,9 +80,10 @@ body main header .rd-line input {
   font-size: 16px;
   outline: none;
   background: transparent;
-  border: 2px solid #FEC260;
+  border: 3px solid #FEC260;
   color: #FEC260;
   border-radius: 5px;
+  border-bottom: 3px solid #A10035;
 }
 body main header .rd-line input::-moz-placeholder {
   color: #A10035;
@@ -97,11 +101,13 @@ body main header .rd-line button {
   height: 35px;
   font-size: 16px;
   width: 50px;
-  background: #FEC260;
+  background: transparent;
   color: #A10035;
   font-weight: bolder;
   text-transform: uppercase;
-  border: 2px solid #FEC260;
+  border: 4px solid #FEC260;
+  border-bottom: 4px solid #A10035;
+  border-right: 4px solid #A10035;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -134,7 +140,7 @@ body main .container li .tasks {
   margin-top: 5px;
   width: 100%;
   height: 48px;
-  background: #A10035;
+  background: red;
   padding: 0 5px;
   display: flex;
   align-items: center;
